@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dubai Activities</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #0066cc;
+        }
+
+        p {
+            color: #666;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Dubai Activities</h1>
+        <p>Experience the Thrill of Dubai with Exciting Activities</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="attractions.html">Attractions</a>
+        <a href="activities.html">Activities</a>
+        <a href="dining.html">Dining</a>
+    </nav>
+
+    <section>
+        <h2>Camel Riding</h2>
+        <img src="images/camel_riding.webp" alt="Camel Riding Image">
+        <p>Embark on a traditional desert adventure with camel riding. Traverse the golden sands of Dubai on the back of these gentle giants and experience the timeless beauty of the desert.</p>
+    </section>
+
+    <section>
+        <h2>Jet Skiing</h2>
+        <img src="images/jet_skiing_dubai.avif" alt="Jet Skiing Image">
+        <p>Feel the adrenaline rush as you skim across the crystal-clear waters of the Arabian Gulf on a jet ski. Jet skiing in Dubai offers an exhilarating experience with stunning views of the city skyline.</p>
+    </section>
+
+    <section>
+        <h2>Zip Lining</h2>
+        <img src="images/zip_lining_dubai.jpeg" alt="Zip Lining Image">
+        <p>Soar through the urban landscape of Dubai with thrilling zip-lining adventures. Experience the city from a unique perspective as you glide through the air high above the bustling streets.</p>
+    </section>
+
+    <section>
+        <h2>Racing Sports Cars</h2>
+        <img src="images/racing_sports_cars_dubai.jpeg" alt="Sports Car Racing Image">
+        <p>Fulfill your need for speed by racing sports cars on Dubai's world-class tracks. Whether you're a seasoned racer or a first-timer, Dubai offers unforgettable experiences for all automotive enthusiasts.</p>
+    </section>
+
+</body>
+
+</html>
+
+<body>
+  
+    <section>
+  
+        <div id="clock"></div>
+
+        <h2>Our Mission</h2>
+        <p>At Explore Dubai Travel, our mission is to inspire and facilitate extraordinary travel experiences in Dubai. We aim to provide personalized, seamless, and memorable journeys, unlocking the wonders of this vibrant city for our valued travelers.</p>
+    </section>
+
+    <section>
+    
+        <h2>Frequently Asked Questions</h2>
+        <div class="accordion">
+            <button class="accordion-btn">How can I book a tour?</button>
+            <div class="panel">
+                <p>Booking a tour is easy. Simply visit our website and follow the steps to book your desired tour package.</p>
+            </div>
+
+            <button class="accordion-btn">What is the cancellation policy?</button>
+            <div class="panel">
+                <p>Our cancellation policy varies depending on the type of tour you've booked. Please check the specific tour details for cancellation information.</p>
+            </div>
+
+            
+        </div>
+    </section>
+
+    <section>
+
+        <h2>Contact Us</h2>
+        <form id="contactForm" onsubmit="return validateForm()">
+            <h2>Name</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <h2>Email</h2>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+
+    <div id="back-to-top" onclick="scrollToTop()">Back to Top</div>
+
+    <script>
+  
+        function updateClock() {
+            let now = new Date();
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            let seconds = now.getSeconds();
+
+            document.getElementById('clock').innerHTML = `<p>Current Time: ${hours}:${minutes}:${seconds}</p>`;
+        }
+
+        setInterval(updateClock, 1000);
+
+    
+        let accBtns = document.getElementsByClassName("accordion-btn");
+        for (let i = 0; i < accBtns.length; i++) {
+            accBtns[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                let panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+
+       
+        function validateForm() {
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let message = document.getElementById('message').value;
+
+            if (name === "" || email === "" || message === "") {
+                alert("Please fill in all fields.");
+                return false;
+            }
+
+           
+
+            return true;
+        }
+
+     
+        window.onscroll = function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById('back-to-top').style.display = "block";
+            } else {
+                document.getElementById('back-to-top').style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+
+

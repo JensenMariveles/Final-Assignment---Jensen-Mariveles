@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dubai Attractions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #0066cc;
+        }
+
+        p {
+            color: #666;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Dubai Attractions</h1>
+        <p>Discover the Marvels of Dubai: A City of Spectacular Architecture</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="attractions.html">Attractions</a>
+        <a href="activities.html">Activities</a>
+        <a href="dining.html">Dining</a>
+    </nav>
+
+    <section>
+        <h2>Burj Khalifa</h2>
+        <img src="images/burjkhalifa.avif" alt="Burj Khalifa Image">
+        <p>The World's Tallest Skyscraper</p>
+        <p>No visit to Dubai is complete without marveling at the Burj Khalifa, the tallest building on the planet. Soaring to a height of 828 meters, this architectural masterpiece offers breathtaking panoramic views of the city from its observation decks. Witness a sunset from the clouds and be prepared for an experience like no other.</p>
+    </section>
+
+    <section>
+        <h2>Burj Al Arab</h2>
+        <img src="images/burj_al_arab.jpg" alt="Burj Al Arab Image">
+        <p>The Pinnacle of Luxury</p>
+        <p>Rising like a sail from the Arabian Gulf, the Burj Al Arab is not just a hotel; it's a symbol of opulence and modern design. Often touted as the world's only 7-star hotel, the Burj Al Arab's extravagant architecture and luxurious interiors make it a must-see landmark. Capture the perfect photo of this iconic building against the backdrop of the glittering Dubai skyline.</p>
+    </section>
+
+    <section>
+        <h2>Dubai Frame</h2>
+        <img src="images/dubai_frame.webp" alt="Dubai Frame Image">
+        <p>Where Old Meets New</p>
+        <p>Step into the Dubai Frame, a colossal architectural structure that frames the city's past and future. Situated in Zabeel Park, this golden frame offers a unique perspective on the contrast between historic and modern Dubai. Ascend to the top for a stunning view of both the old and new parts of the city.</p>
+    </section>
+
+    <section>
+        <h2>The Palm Jumeirah</h2>
+        <img src="images/the_palm_jumeirah.jpeg" alt="The Palm Jumeirah Image">
+        <p>A Man-Made Marvel</p>
+        <p>Dubai's audacity reaches new heights with the Palm Jumeirah, an artificial archipelago shaped like a palm tree. This incredible feat of engineering is home to luxury hotels, upscale residences, and an array of entertainment options. Take a helicopter tour for a bird's eye view of this impressive structure.</p>
+    </section>
+
+    <section>
+        <h2>Dubai Marina</h2>
+        <img src="images/dubai_marina.webp" alt="Dubai Marina Image">
+        <p>A City Within a City</p>
+        <p>Dubai Marina is a testament to modern urban planning, featuring an extensive canal city with skyscrapers, luxurious waterfront living, and a vibrant promenade. Stroll along the marina, dine in world-class restaurants, and witness the city come alive against the backdrop of the sparkling water.</p>
+    </section>
+
+    <section>
+        <h2>Al Fahidi Historic District</h2>
+        <img src="images/al_fahidi_historic_district.jpg" alt="Al Fahidi Historic District">
+        <p>A Glimpse into Dubai's Heritage</p>
+        <p>Escape the glitz and glamour for a moment and explore the Al Fahidi Historic District. Immerse yourself in the rich culture of Dubai as you wander through narrow lanes lined with traditional wind-tower architecture, visit museums, and experience the charm of the old Dubai.</p>
+    </section>
+
+</body>
+
+</html>
+
+<body>
+  
+    <section>
+  
+        <div id="clock"></div>
+
+        <h2>Our Mission</h2>
+        <p>At Explore Dubai Travel, our mission is to inspire and facilitate extraordinary travel experiences in Dubai. We aim to provide personalized, seamless, and memorable journeys, unlocking the wonders of this vibrant city for our valued travelers.</p>
+    </section>
+
+    <section>
+    
+        <h2>Frequently Asked Questions</h2>
+        <div class="accordion">
+            <button class="accordion-btn">How can I book a tour?</button>
+            <div class="panel">
+                <p>Booking a tour is easy. Simply visit our website and follow the steps to book your desired tour package.</p>
+            </div>
+
+            <button class="accordion-btn">What is the cancellation policy?</button>
+            <div class="panel">
+                <p>Our cancellation policy varies depending on the type of tour you've booked. Please check the specific tour details for cancellation information.</p>
+            </div>
+
+            
+        </div>
+    </section>
+
+    <section>
+
+        <h2>Contact Us</h2>
+        <form id="contactForm" onsubmit="return validateForm()">
+            <h2>Name</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <h2>Email</h2>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+
+    <div id="back-to-top" onclick="scrollToTop()">Back to Top</div>
+
+    <script>
+  
+        function updateClock() {
+            let now = new Date();
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            let seconds = now.getSeconds();
+
+            document.getElementById('clock').innerHTML = `<p>Current Time: ${hours}:${minutes}:${seconds}</p>`;
+        }
+
+        setInterval(updateClock, 1000);
+
+    
+        let accBtns = document.getElementsByClassName("accordion-btn");
+        for (let i = 0; i < accBtns.length; i++) {
+            accBtns[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                let panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+
+       
+        function validateForm() {
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let message = document.getElementById('message').value;
+
+            if (name === "" || email === "" || message === "") {
+                alert("Please fill in all fields.");
+                return false;
+            }
+
+           
+
+            return true;
+        }
+
+     
+        window.onscroll = function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById('back-to-top').style.display = "block";
+            } else {
+                document.getElementById('back-to-top').style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+
+

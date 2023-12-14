@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Restaurants in Dubai</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        header {
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #0066cc;
+        }
+
+        p {
+            color: #666;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Best Restaurants in Dubai</h1>
+        <p>Indulge in Culinary Delights in the Heart of Dubai</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="attractions.html">Attractions</a>
+        <a href="activities.html">Activities</a>
+        
+    </nav>
+
+    <section>
+        <h2>Zuma</h2>
+        <img src="images/zuma.jpg" alt="Zuma Restaurant Image">
+        <p>Located in the heart of downtown Dubai, Zuma offers contemporary Japanese cuisine in a sophisticated and vibrant setting. From sushi to robata grill dishes, Zuma provides an exquisite dining experience.</p>
+        <p>Recommended Dish: Black Cod Miso</p>
+    </section>
+
+    <section>
+        <h2>Pierchic</h2>
+        <img src="images/pierchic.webp" alt="Pierchic Restaurant Image">
+        <p>Set on a pier extending into the Arabian Gulf, Pierchic is a seafood restaurant with breathtaking views of the Dubai coastline. Enjoy a fine dining experience with a menu featuring the freshest catch of the day.</p>
+        <p>Recommended Dish: Lobster Thermidor</p>
+    </section>
+
+    <section>
+        <h2>Al Hadheerah</h2>
+        <img src="images/al_hadheerah.jpg" alt="Al Hadheerah Restaurant Image">
+        <p>Transport yourself to an Arabian fantasy at Al Hadheerah, located in Bab Al Shams Desert Resort & Spa. This restaurant offers a traditional Arabian buffet and live entertainment under the stars.</p>
+        <p>Recommended Dish: Mixed Grill</p>
+    </section>
+
+    <section>
+        <h2>La Petite Maison</h2>
+        <img src="images/la_petite_maison.webp" alt="La Petite Maison Restaurant Image">
+        <p>La Petite Maison is a French-Mediterranean restaurant in DIFC, known for its vibrant atmosphere and fresh, seasonal ingredients. The menu is inspired by the culinary diversity of the Mediterranean region.</p>
+        <p>Recommended Dish: Truffle Risotto</p>
+    </section>
+
+</body>
+
+</html>
+
+<body>
+  
+    <section>
+  
+        <div id="clock"></div>
+
+        <h2>Our Mission</h2>
+        <p>At Explore Dubai Travel, our mission is to inspire and facilitate extraordinary travel experiences in Dubai. We aim to provide personalized, seamless, and memorable journeys, unlocking the wonders of this vibrant city for our valued travelers.</p>
+    </section>
+
+    <section>
+    
+        <h2>Frequently Asked Questions</h2>
+        <div class="accordion">
+            <button class="accordion-btn">How can I book a tour?</button>
+            <div class="panel">
+                <p>Booking a tour is easy. Simply visit our website and follow the steps to book your desired tour package.</p>
+            </div>
+
+            <button class="accordion-btn">What is the cancellation policy?</button>
+            <div class="panel">
+                <p>Our cancellation policy varies depending on the type of tour you've booked. Please check the specific tour details for cancellation information.</p>
+            </div>
+
+            
+        </div>
+    </section>
+
+    <section>
+
+        <h2>Contact Us</h2>
+        <form id="contactForm" onsubmit="return validateForm()">
+            <h2>Name</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <h2>Email</h2>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+
+    <div id="back-to-top" onclick="scrollToTop()">Back to Top</div>
+
+    <script>
+  
+        function updateClock() {
+            let now = new Date();
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            let seconds = now.getSeconds();
+
+            document.getElementById('clock').innerHTML = `<p>Current Time: ${hours}:${minutes}:${seconds}</p>`;
+        }
+
+        setInterval(updateClock, 1000);
+
+    
+        let accBtns = document.getElementsByClassName("accordion-btn");
+        for (let i = 0; i < accBtns.length; i++) {
+            accBtns[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                let panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+
+       
+        function validateForm() {
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let message = document.getElementById('message').value;
+
+            if (name === "" || email === "" || message === "") {
+                alert("Please fill in all fields.");
+                return false;
+            }
+
+           
+
+            return true;
+        }
+
+     
+        window.onscroll = function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById('back-to-top').style.display = "block";
+            } else {
+                document.getElementById('back-to-top').style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+
+

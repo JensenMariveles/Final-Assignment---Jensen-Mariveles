@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+        font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff; 
+        color: #fff;
+    }
+
+    header {
+        background-color: #000; 
+        color: #fff;
+        text-align: center;
+        padding: 1em;
+    }
+
+    .logo {
+        font-size: 2em;
+        font-weight: bolder;
+        text-decoration: none;
+        color: #fff;
+    }
+
+    nav {
+        background-color: #000; 
+        color: #fff;
+        padding: 1em 20px;
+        text-align: center;
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav li {
+        margin-right: 20px;
+    }
+
+    nav button {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        font-size: 1.2em;
+        transition: color 0.3s ease-in-out;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    nav button:hover {
+        color: #38A0FF;
+    }
+
+    .cta-buttons {
+        display: flex;
+        align-items: center;
+    }
+
+    .sign-in-btn,
+    .login-btn {
+        padding: 10px 15px;
+        margin-left: 20px;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    }
+
+    .sign-in-btn {
+        background-color: #E1E9FF;
+        color: #38A0FF;
+    }
+
+    .login-btn {
+        background-color: #38A0FF;
+        color: #fff;
+    }
+
+    .sign-in-btn:hover,
+    .login-btn:hover {
+        background-color: #0057b3;
+    }
+
+    main {
+        padding: 20px;
+        text-align: center;
+    }
+
+    h1 {
+        color: #1a1a1a;
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+
+    p {
+        color: #666;
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
+
+    .card img {
+        width: 100%; 
+        height: auto;
+        object-fit: cover;
+    }
+
+    .card-content {
+        padding: 20px;
+    }
+
+    .card-title {
+        color: #1a1a1a;
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    .card-description {
+        color: #666;
+    }
+
+    footer {
+        background-color: #000; 
+        color: #fff;
+        text-align: center;
+        padding: 1em 0;
+    }
+</style>
+<title>Explore Dubai</title>
+<script src="js/windowsize.js" defer></script>
+
+</head>
+    <header>
+        <a href="#" class="logo">ExploreDubai</a>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html"><button>Home</button></a></li>
+            <li><a href="attractions.html"><button>Attractions</button></a></li>
+            <li><a href="activities.html"><button>Activities</button></a></li>
+            <li><a href="dining.html"><button>Dining</button></a></li>
+            <li><a href="about.html"><button>About us</button></a></li>
+        </ul>
+    </nav>
+
+    <div class="cta-buttons">
+        <button class="sign-in-btn">Sign In</button>
+        <button class="login-btn">Log In</button>
+    </div>
+
+    <main>
+        <main>
+            <h1>Discover Dubai In The Best Way Possible.</h1>
+    
+            <p>Dubai, a city known for its futuristic architecture, luxury shopping, and vibrant nightlife, is a must-visit destination for travelers around the world.</p>
+    
+            <p>Explore the iconic Burj Khalifa, indulge in a desert safari adventure, and experience the rich cultural heritage at the Dubai Museum.</p>
+    
+            <p>Whether you're a thrill-seeker, a shopaholic, or a history enthusiast, Dubai has something for everyone.</p>
+    
+            <h1>Attractions</h1>
+    
+            <div class="card">
+                <img src="images/Burj Khalifa.jpeg" alt="Dubai Attraction 1">
+                <div class="card-content">
+                    <h3 class="card-title">Burj Khalifa</h3>
+                    <p class="card-description">Visit the world's tallest building and enjoy panoramic views of the city.</p>
+                </div>
+            </div>
+    
+            <div class="card">
+                <img src="images/Dubai Desert Safari.webp" alt="Dubai Attraction 2">
+                <div class="card-content">
+                    <h3 class="card-title">Desert Safari</h3>
+                    <p class="card-description">Experience the thrill of a desert safari with dune bashing and cultural performances.</p>
+                </div>
+            </div>
+    
+            <div class="card">
+                <img src="images/Dubai Museum.jpeg" alt="Dubai Attraction 3">
+                <div class="card-content">
+                    <h3 class="card-title">Dubai Museum</h3>
+                    <p class="card-description">Explore the history of Dubai at the Dubai Museum located in the Al Fahidi Fort.</p>
+                </div>
+            </div>
+        </main>
+    </main>
+
+    <main>
+        <div class="card">
+            <img src="images/Dubai Mall.jpeg" alt="Dubai Attraction 4">
+            <div class="card-content">
+                <h3 class="card-title">Dubai Mall</h3>
+                <p class="card-description">It is the largest mall in the world by total land area and the 26th-largest shopping mall in the world by gross leasable area</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/Dubai Miracle Garden.webp" alt="Dubai Attraction 5">
+            <div class="card-content">
+                <h3 class="card-title">Dubai Miracle Garden</h3>
+                <p class="card-description">The Dubai Miracle Garden is a flower garden located in the district of Dubailand, Dubai, United Arab Emirates. The garden was launched on Valentine's Day in 2013.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/Aquaventure waterpark Dubai.jpeg" alt="Dubai Attraction 6">
+            <div class="card-content">
+                <h3 class="card-title">Aquaventure Waterpark</h3>
+                <p class="card-description">Vast water park with zip lines, slides through shark-filled lagoons & a splash area.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 ExploreDubai. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Dubai</title>
+    <style>
+     
+
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            cursor: pointer;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+  
+    <section>
+  
+        <div id="clock"></div>
+
+        <h2>Our Mission</h2>
+        <p>At Explore Dubai Travel, our mission is to inspire and facilitate extraordinary travel experiences in Dubai. We aim to provide personalized, seamless, and memorable journeys, unlocking the wonders of this vibrant city for our valued travelers.</p>
+    </section>
+
+    <section>
+    
+        <h2>Frequently Asked Questions</h2>
+        <div class="accordion">
+            <button class="accordion-btn">How can I book a tour?</button>
+            <div class="panel">
+                <p>Booking a tour is easy. Simply visit our website and follow the steps to book your desired tour package.</p>
+            </div>
+
+            <button class="accordion-btn">What is the cancellation policy?</button>
+            <div class="panel">
+                <p>Our cancellation policy varies depending on the type of tour you've booked. Please check the specific tour details for cancellation information.</p>
+            </div>
+
+            
+        </div>
+    </section>
+
+    <section>
+
+        <h2>Contact Us</h2>
+        <form id="contactForm" onsubmit="return validateForm()">
+            <h2>Name</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <h2>Email</h2>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+
+    <div id="back-to-top" onclick="scrollToTop()">Back to Top</div>
+
+    <script>
+  
+        function updateClock() {
+            let now = new Date();
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            let seconds = now.getSeconds();
+
+            document.getElementById('clock').innerHTML = `<p>Current Time: ${hours}:${minutes}:${seconds}</p>`;
+        }
+
+        setInterval(updateClock, 1000);
+
+    
+        let accBtns = document.getElementsByClassName("accordion-btn");
+        for (let i = 0; i < accBtns.length; i++) {
+            accBtns[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                let panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+
+       
+        function validateForm() {
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let message = document.getElementById('message').value;
+
+            if (name === "" || email === "" || message === "") {
+                alert("Please fill in all fields.");
+                return false;
+            }
+
+           
+
+            return true;
+        }
+
+     
+        window.onscroll = function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById('back-to-top').style.display = "block";
+            } else {
+                document.getElementById('back-to-top').style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+
+

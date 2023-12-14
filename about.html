@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Explore Dubai Travel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #0066cc;
+        }
+
+        p {
+            color: #666;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        .team-member {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .team-member img {
+            max-width: 150px; 
+            border-radius: 50%;
+            margin: 10px;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>About Us - Explore Dubai Travel</h1>
+        <p>Your Gateway to Unforgettable Adventures in Dubai</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="attractions.html">Attractions</a>
+        <a href="activities.html">Activities</a>
+        <a href="dining.html">Dining</a>
+    </nav>
+
+    <section>
+        <h2>Our Mission</h2>
+        <p>At Explore Dubai Travel, our mission is to inspire and facilitate extraordinary travel experiences in Dubai. We aim to provide personalized, seamless, and memorable journeys, unlocking the wonders of this vibrant city for our valued travelers.</p>
+    </section>
+
+    <section>
+        <h2>Our Team</h2>
+        <div class="team-member">
+            <img src="images/founder.jpg" alt="Founder Image">
+            <p><strong>Ahmed Al-Hashimi  Malik</strong><br>Founder & CEO</p>
+        </div>
+        <div class="team-member">
+            <img src="images/marketing.jpg" alt="Marketing Director Image">
+            <p><strong>Khalid Al-Mazroui  Al-Harbi</strong><br>Marketing Director</p>
+        </div>
+        <div class="team-member">
+            <img src="images/operations.jpg" alt="Operations Manager Image">
+            <p><strong>Sultan Al-Suwaidi  Khouri</strong><br>Operations Manager</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Our Values</h2>
+        <p>1. **Passion:** We are passionate about showcasing the beauty and diversity of Dubai, ensuring our travelers have the most immersive experiences.</p>
+        <p>2. **Integrity:** We operate with the utmost integrity, prioritizing transparency and honesty in all our interactions.</p>
+        <p>3. **Innovation:** Embracing innovation allows us to continuously improve and offer cutting-edge travel solutions.</p>
+        <p>4. **Customer-Centric:** Our travelers are at the heart of everything we do. We strive to exceed their expectations and create lasting memories.</p>
+    </section>
+
+    <section>
+        <h2>Our Story</h2>
+        <p>Founded in 2023, Explore Dubai Travel was born out of a shared passion for the enchanting city of Dubai. Our journey began with a vision to curate exceptional travel experiences, blending luxury with authenticity. Over the years, we've grown, evolved, and created a community of travelers who trust us to make their Dubai adventures truly unforgettable.</p>
+    </section>
+
+</body>
+
+</html>
+
+<body>
+  
+    <section>
+  
+        <div id="clock"></div>
+
+        <h2>Our Mission</h2>
+        <p>At Explore Dubai Travel, our mission is to inspire and facilitate extraordinary travel experiences in Dubai. We aim to provide personalized, seamless, and memorable journeys, unlocking the wonders of this vibrant city for our valued travelers.</p>
+    </section>
+
+    <section>
+    
+        <h2>Frequently Asked Questions</h2>
+        <div class="accordion">
+            <button class="accordion-btn">How can I book a tour?</button>
+            <div class="panel">
+                <p>Booking a tour is easy. Simply visit our website and follow the steps to book your desired tour package.</p>
+            </div>
+
+            <button class="accordion-btn">What is the cancellation policy?</button>
+            <div class="panel">
+                <p>Our cancellation policy varies depending on the type of tour you've booked. Please check the specific tour details for cancellation information.</p>
+            </div>
+
+            
+        </div>
+    </section>
+
+    <section>
+
+        <h2>Contact Us</h2>
+        <form id="contactForm" onsubmit="return validateForm()">
+            <h2>Name</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <h2>Email</h2>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+
+    <div id="back-to-top" onclick="scrollToTop()">Back to Top</div>
+
+    <script>
+  
+        function updateClock() {
+            let now = new Date();
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            let seconds = now.getSeconds();
+
+            document.getElementById('clock').innerHTML = `<p>Current Time: ${hours}:${minutes}:${seconds}</p>`;
+        }
+
+        setInterval(updateClock, 1000);
+
+    
+        let accBtns = document.getElementsByClassName("accordion-btn");
+        for (let i = 0; i < accBtns.length; i++) {
+            accBtns[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                let panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+
+       
+        function validateForm() {
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let message = document.getElementById('message').value;
+
+            if (name === "" || email === "" || message === "") {
+                alert("Please fill in all fields.");
+                return false;
+            }
+
+           
+
+            return true;
+        }
+
+     
+        window.onscroll = function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById('back-to-top').style.display = "block";
+            } else {
+                document.getElementById('back-to-top').style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+
+
